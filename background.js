@@ -31,6 +31,7 @@ function hideTwitterAds() {
             }
         }
     }
+
     const hideAds = throttle(event => {
         article = null;
         for(item of $("article span:contains('Promoted')").parents()){
@@ -41,7 +42,9 @@ function hideTwitterAds() {
         }; 
         $(article).css("display", "none");
     }, 1000);
+    
     document.addEventListener("scroll", hideAds);
+   //document.addEventListener("load", setInterval(hideAds, 1000));
 }
 
 chrome.action.onClicked.addListener(tab => {
