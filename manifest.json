@@ -1,0 +1,14 @@
+{
+    "name": "Clean up on scroll",
+    "action": {},
+    "manifest_version": 3,
+    "version": "0.1",
+    "description": "Clean up your twitter feed while scrolling through your timeline",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
